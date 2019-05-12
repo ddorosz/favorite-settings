@@ -22,6 +22,7 @@ alias kat='cd ~/projects/katsudo'
 alias katb='cd ~/projects/katsudo/katsudo'
 alias katu='cd ~/projects/katsudo/katsudo-ui'
 alias proj='cd ~/projects'
+alias fzv='vim $(fzf)'
 
 # NodeEnv Setup
 
