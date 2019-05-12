@@ -23,6 +23,7 @@ alias katb='cd ~/projects/katsudo/katsudo'
 alias katu='cd ~/projects/katsudo/katsudo-ui'
 alias proj='cd ~/projects'
 alias fzv='vim $(fzf)'
+alias ops='cd ~/projects/OpsLevel'
 
 # NodeEnv Setup
 
@@ -33,3 +34,10 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# Auto complete git branches
+# To auto complete: curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
