@@ -14,12 +14,14 @@ export TERM=xterm-256color
 alias vimrc='vim ~/.vim/vimrc'
 alias sourceb='source ~/.bash_profile'
 alias bashp='vim ~/.bash_profile'
+alias tmuxv='vim ~/.tmux.conf'
 alias dl='cd ~/Downloads'
 alias docs='cd ~/Documents'
 alias ls='ls -GFh'
 alias kat='cd ~/projects/katsudo'
 alias katb='cd ~/projects/katsudo/katsudo'
 alias katu='cd ~/projects/katsudo/katsudo-ui'
+alias proj='cd ~/projects'
 
 # NodeEnv Setup
 

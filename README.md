@@ -2,7 +2,10 @@
 
 ## General
 
+Some commands are specific to the dev environment you are working on and will not work on all machines.
+
 ## VIM
+
 
 ## TMUX
 
