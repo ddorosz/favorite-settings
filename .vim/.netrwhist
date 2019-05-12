@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/ddorosz/projects/games/config/webpack'
+let g:netrw_dirhist_2='/Users/ddorosz'
+let g:netrw_dirhist_3='/Users/ddorosz/projects/katsudo/katsudo'
+let g:netrw_dirhist_4='/Users/ddorosz/projects/katsudo/katsudo/test'
+let g:netrw_dirhist_5='/Users/ddorosz/projects/katsudo/katsudo'
