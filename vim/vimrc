@@ -1,0 +1,80 @@
+" Settings
+
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set laststatus=2
+set number
+set noshowmode
+set wildmenu
+set wildmode=list:longest,full
+set splitbelow
+set splitright
+set cursorline
+set showcmd
+set showmatch
+set lazyredraw
+set incsearch
+set hlsearch
+
+let mapleader=","
+
+
+" Vim Wiki Settings
+
+set nocompatible
+
+syntax enable
+syntax on
+
+
+" Plugins
+
+call plug#begin('~/.vim/plugged')
+  Plug '/usr/local/opt/fzf'
+  Plug 'junegunn/fzf.vim'
+  Plug 'itchyny/lightline.vim'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'elixir-editors/vim-elixir'
+  Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-surround'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'vimwiki/vimwiki'
+call plug#end()
+
+execute pathogen#infect()
+filetype plugin indent on
+
+
+" Key Mapping
+
+map ; :Files<CR>
+map <C-\> :NERDTree<CR>
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap j gj
+nnoremap k gk
+nnoremap <leader>u :GundoToggle<CR>
+nnoremap <leader>s :mksession<CR>
+nnoremap <leader>a :Ag
+
+if !has('gui_running')
+    set t_Co=256
+endif
+
+" Setting colors for lightline
+
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ }
+
+" allows cursor change in tmux mode
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
