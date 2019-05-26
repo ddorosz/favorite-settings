@@ -11,6 +11,7 @@ export TERM=xterm-256color
 
 # Aliases
 
+alias vi=vim
 alias vimrc='vim ~/.vim/vimrc'
 alias sourceb='source ~/.bash_profile'
 alias bashp='vim ~/.bash_profile'
@@ -18,12 +19,20 @@ alias tmuxv='vim ~/.tmux.conf'
 alias dl='cd ~/Downloads'
 alias docs='cd ~/Documents'
 alias ls='ls -GFh'
+alias proj='cd ~/projects'
+alias fzv='vim $(fzf)'
+
+# Env Specific
+alias be='bundle exec'
+
+# OpsLevel Specific
+alias ops='cd ~/projects/OpsLevel'
+alias opsj='cd ~/projects/OpsLevel/app/javascript/packs'
+
+# Katsudo Specific
 alias kat='cd ~/projects/katsudo'
 alias katb='cd ~/projects/katsudo/katsudo'
 alias katu='cd ~/projects/katsudo/katsudo-ui'
-alias proj='cd ~/projects'
-alias fzv='vim $(fzf)'
-alias ops='cd ~/projects/OpsLevel'
 
 # NodeEnv Setup
 

@@ -17,6 +17,14 @@ set showmatch
 set lazyredraw
 set incsearch
 set hlsearch
+set bs=2
+set mouse=a
+set timeoutlen=1000 ttimeoutlen=0
+
+colorscheme gruvbox
+
+
+" Remapping Leader Character
 
 let mapleader=","
 
@@ -24,10 +32,6 @@ let mapleader=","
 " Vim Wiki Settings
 
 set nocompatible
-
-syntax enable
-syntax on
-
 
 " Plugins
 
@@ -43,22 +47,36 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'scrooloose/nerdcommenter'
   Plug 'vimwiki/vimwiki'
+  Plug 'posva/vim-vue'
+  Plug 'tpope/vim-rails'
 call plug#end()
 
 execute pathogen#infect()
 filetype plugin indent on
+filetype plugin on
+syntax enable
+syntax on
+syntax sync fromstart
 
 
 " Key Mapping
 
 map ; :Files<CR>
 map <C-\> :NERDTree<CR>
+" Clears the search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>s :mksession<CR>
 nnoremap <leader>a :Ag
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
+
+" Remapping deletes without copy
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
 
 if !has('gui_running')
     set t_Co=256
@@ -78,3 +96,4 @@ else
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
